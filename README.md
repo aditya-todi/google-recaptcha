@@ -4,8 +4,8 @@
 `npm install`
 `cd amtica-google-captcha`
 ## then install dependencies for frontend
-`npm install`
-## install mongoDB server and run it at port 27015 
+`npm install` 
+install mongoDB server and run it at `port 27015` 
 ## to run the frontend and backend together
 `npm run dev`
 
