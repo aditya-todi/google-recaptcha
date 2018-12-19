@@ -8,6 +8,7 @@
 install mongoDB server and run it at `port 27015` 
 ## to run the frontend and backend together
 `npm run dev`
+### the server will be up and running, access it from http://localhost:4200 in the browser
 
 ## there are key features for this web app
 ### Backend
