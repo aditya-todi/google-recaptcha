@@ -1,0 +1,10 @@
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+<div class="success" *ngIf="user">
+  Hello, {{ user.name }}
+</div>
+<div class="success" *ngIf="user && user.author">
+  You have author access and can add questions to our question bank
+</div>
+<button class="btn btn-primary mr-3" type="submit" (click)="logout()">LOGOUT</button>

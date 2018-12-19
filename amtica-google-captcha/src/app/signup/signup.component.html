@@ -1,0 +1,47 @@
+<form (ngSubmit)="saveForm()" [formGroup]="registerForm">
+
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="name">name</label>
+    <input class="form-control" id="name" formControlName="name" />
+  </div>
+
+  <div class="form-group row mb-2">
+    <label class="col-md-2 col-form-label" for="username">username</label>
+    <input class="form-control" id="username" formControlName="username" />
+  </div>
+
+  <div formGroupName="passwordGroup">
+
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="password">password</label>
+      <input class="form-control" id="password" type="password" formControlName="password" />
+    </div>
+
+    <div class="form-group row mb-2">
+      <label class="col-md-2 col-form-label" for="confirmedPassword">ConfirmPassword</label>
+      <input class="form-control" id="confirmedPassword" type="password" formControlName="confirmedPassword" />
+
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" id="author" type="checkbox" formControlName="author" />AUTHOR
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group row mb-2">
+    <button class="btn btn-primary mr-3" type="submit" [disabled]="!registerForm.valid">REGISTER</button>
+    <button class="btn btn-outline-secondary" type="button" (click)="populateTestData()">Test Data</button>
+  </div>
+
+  <div class="form-group row mb-2">
+    <re-captcha (resolved)="resolved($event)" siteKey="6LcZHIMUAAAAAPm-B1hn9qtrQzlcSyFsFBRS4G6W"></re-captcha>
+  </div>
+</form>
+
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
