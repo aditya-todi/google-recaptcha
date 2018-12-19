@@ -6,7 +6,7 @@
 ## then install dependencies for frontend
 `npm install` 
 install mongoDB server and run it at `port 27015` 
-## to run the frontend and backend together
+## to run the frontend and backend together (from the root folder)
 `npm run dev`
 ### the server will be up and running, access it from http://localhost:4200 in the browser
 
